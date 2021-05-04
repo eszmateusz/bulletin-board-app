@@ -67,9 +67,8 @@ export const initialState = {
       error: false,
     },
   },
-  users: [
-    { id: '1', mail: 'amandagreat@example.com' },
-    { id: '2', mail: 'kennyfox@example.com' },
-    { id: '3', mail: 'mathsimon@example.com' },
-  ],
+  user: {
+    id: '',
+    logged: false,
+  },
 };
