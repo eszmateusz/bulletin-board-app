@@ -68,7 +68,7 @@ export const initialState = {
     },
   },
   user: {
-    id: '',
-    logged: false,
+    id: '1',
+    logged: true,
   },
 };
