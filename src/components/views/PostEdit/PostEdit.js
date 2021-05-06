@@ -17,7 +17,6 @@ import styles from './PostEdit.module.scss';
 const Component = ({ className, posts, updatePost, match }) => {
 
   const postArray = posts.filter(el => el.id === match.params.id);
-
   const [post, setPost] = React.useState(postArray[0]);
 
   // const today = new Date();
@@ -36,7 +35,6 @@ const Component = ({ className, posts, updatePost, match }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     await updatePost(post);
   };
 
@@ -50,11 +48,8 @@ const Component = ({ className, posts, updatePost, match }) => {
   return (
     <div className={clsx(className, styles.root)}>
       <Container maxWidth="lg">
-
         <Card className={styles.card}>
-
           <CardHeader title="Edit post" />
-
           <form className={styles.form} onSubmit={e => handleSubmit(e)}>
             <TextField
               id="title"
@@ -71,6 +66,15 @@ const Component = ({ className, posts, updatePost, match }) => {
               value={post.price}
               onChange={e => handleChange(e, 'price')}
             />
+            <input
+              accept="image/*"
+              className={styles.input}
+              id="upload-photo"
+              multiple
+              type="file"
+              onChange={e => handleChange(e, 'image')}
+            />
+            <img src={post.image} alt="post img" className={styles.image} />
             <TextField
               variant="outlined"
               multiline
@@ -82,7 +86,6 @@ const Component = ({ className, posts, updatePost, match }) => {
               required
               value={post.content}
               onChange={e => handleChange(e, 'content')}
-
             />
             <TextField
               id="mail"

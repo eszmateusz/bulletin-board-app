@@ -19,7 +19,7 @@ import { getUser } from '../../../redux/userRedux';
 import styles from './Post.module.scss';
 import { settings } from '../../../settings.js';
 
-const Component = ({ className, children, match, posts, user }) => (
+const Component = ({ className, match, posts, user }) => (
   <div className={clsx(className, styles.root)}>
     <Container maxWidth="lg">
 
@@ -69,13 +69,11 @@ const Component = ({ className, children, match, posts, user }) => (
         </Card>
       ))}
 
-      {children}
     </Container>
   </div>
 );
 
 Component.propTypes = {
-  children: PropTypes.node,
   className: PropTypes.string,
   posts: PropTypes.array,
   match: PropTypes.shape({

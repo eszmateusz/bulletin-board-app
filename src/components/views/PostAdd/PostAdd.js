@@ -38,7 +38,6 @@ const Component = ({ className, addPost }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log('Submitted');
     await addPost(post);
   };
 
@@ -48,8 +47,6 @@ const Component = ({ className, addPost }) => {
       [name]: event.target.value,
     });
   };
-
-  // console.log('post', post);
 
   return (
     <div className={clsx(className, styles.root)}>
@@ -72,6 +69,14 @@ const Component = ({ className, addPost }) => {
               value={post.price}
               onChange={e => handleChange(e, 'price')}
             />
+            <input
+              accept="image/*"
+              className={styles.input}
+              id="upload-photo"
+              multiple
+              type="file"
+              onChange={e => handleChange(e, 'image')}
+            />
             <TextField
               variant="outlined"
               multiline
@@ -83,7 +88,6 @@ const Component = ({ className, addPost }) => {
               required
               value={post.content}
               onChange={e => handleChange(e, 'content')}
-
             />
             <TextField
               id="mail"

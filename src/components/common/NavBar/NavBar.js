@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import AppBar from '@material-ui/core/AppBar';
-import Typography from '@material-ui/core/Typography';
 import Toolbar from '@material-ui/core/Toolbar';
 import Button from '@material-ui/core/Button';
 
@@ -20,9 +19,9 @@ const Component = ({ className, title, user }) => (
         {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
           <MenuIcon />
         </IconButton> */}
-        <Typography variant="h6" className={styles.title}>
-          {title}
-        </Typography>
+        <Button color="inherit" className={styles.title} href="/">
+          <h6>{title}</h6>
+        </Button>
 
         {user.logged ?
           <div className={styles.menu}>
