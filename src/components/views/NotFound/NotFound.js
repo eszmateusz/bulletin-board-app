@@ -15,7 +15,7 @@ const Component = ({ className }) => (
   <div className={clsx(className, styles.root)}>
     <img src={settings.notFound} alt="404 error" className={styles.image} />
     <div className={styles.content}>
-      <h3>Page not found</h3>
+      <h3>Sorry, page not found.</h3>
       <Button size="large" href='/' variant="contained">Go to main page</Button>
     </div>
   </div>

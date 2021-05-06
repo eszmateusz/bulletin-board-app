@@ -26,9 +26,9 @@ const Component = ({ className, match, posts, user }) => (
       {posts.filter(el => el.id === match.params.id).map(el => (
         <Card key={el.id} className={styles.card}>
           <div className='row'>
-            <CardHeader title={el.title} subheader={`${el.date}/${el.updateDate}`} className={styles.title} />
+            <CardHeader title={el.title} overflow="auto" subheader={`${el.date}/${el.updateDate}`} className={styles.title} />
 
-            {el.price ? <TextField variant="outlined" label="price" className={styles.price} value={el.price} /> : ''}
+            {el.price ? <TextField variant="outlined" label="price" overflow="auto" className={styles.price} value={el.price} /> : ''}
 
             {el.image ?
               <CardMedia
@@ -44,7 +44,7 @@ const Component = ({ className, match, posts, user }) => (
 
           <div className="row">
             <CardContent className={styles.contentWrapper}>
-              <TextField variant="outlined" value={el.content} className={styles.content} />
+              <TextField variant="outlined" value={el.content} overflow="auto" className={styles.content} />
 
               <div className={styles.status}>
                 <i>{el.status}</i>

@@ -18,7 +18,7 @@ import { UserPosts } from './components/views/UserPosts/UserPosts';
 const theme = createMuiTheme({
   palette: {
     primary: { main: '#130f40' },
-    secondary: { main: '#f97d24' },
+    secondary: { main: '#b2f924' },
   },
 });
 

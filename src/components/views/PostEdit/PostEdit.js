@@ -19,12 +19,6 @@ const Component = ({ className, posts, updatePost, match }) => {
   const postArray = posts.filter(el => el.id === match.params.id);
   const [post, setPost] = React.useState(postArray[0]);
 
-  // const today = new Date();
-  // const day = today.getDate();
-  // const month = today.getMonth();
-  // const year = today.getFullYear();
-  // const date = day + '/' + month + '/' + year;
-
   const titleProps = {
     minLength: 10,
   };
@@ -54,6 +48,7 @@ const Component = ({ className, posts, updatePost, match }) => {
             <TextField
               id="title"
               label="Title"
+              overflow="auto"
               required
               inputProps={titleProps}
               value={post.title}
@@ -62,6 +57,7 @@ const Component = ({ className, posts, updatePost, match }) => {
             <TextField
               id="price"
               label="Price"
+              overflow="auto"
               type="number"
               value={post.price}
               onChange={e => handleChange(e, 'price')}
@@ -79,6 +75,7 @@ const Component = ({ className, posts, updatePost, match }) => {
               variant="outlined"
               multiline
               id="content"
+              overflow="auto"
               inputProps={contentProps}
               label="Content"
               placeholder="Write your post here"
@@ -91,6 +88,7 @@ const Component = ({ className, posts, updatePost, match }) => {
               id="mail"
               label="E-mail"
               type="email"
+              overflow="auto"
               required
               value={post.mail}
               onChange={e => handleChange(e, 'mail')}
@@ -99,6 +97,7 @@ const Component = ({ className, posts, updatePost, match }) => {
               id="phone"
               label="Phone number"
               type="number"
+              overflow="auto"
               value={post.phone}
               onChange={e => handleChange(e, 'phone')}
             />

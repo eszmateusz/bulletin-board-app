@@ -46,3 +46,14 @@
     }
   }
 }
+
+
+@media (max-width: 576px) {
+  .root {
+    .card {
+      .image {
+        margin: 0 auto;
+      }
+    }
+  }
+}
