@@ -109,7 +109,7 @@ const Component = ({ className, addPost }) => {
               value={post.phone}
               onChange={e => handleChange(e, 'phone')}
             />
-            <Button type="submit" color="secondary" variant="contained" className={styles.button}>Save</Button>
+            <Button type="submit" color="secondary" variant="contained" className={styles.button}>Add</Button>
             <Button color="secondary" href="/" variant="contained" className={styles.button}>Return</Button>
           </form>
         </Card>

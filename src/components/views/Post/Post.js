@@ -47,7 +47,7 @@ const Component = ({ className, match, posts, user }) => (
               <TextField variant="outlined" value={el.content} overflow="auto" className={styles.content} />
 
               <div className={styles.status}>
-                <i>{el.status}</i>
+                <i>Status: {el.status}</i>
               </div>
               <div className={styles.contact}>
                 <h3>Contact details</h3>

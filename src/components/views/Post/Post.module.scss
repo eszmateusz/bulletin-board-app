@@ -2,7 +2,7 @@
 
 .root {
   .card {
-    margin: 10px;
+    margin: 30px 0;
     padding: 15px;
 
     .title {
@@ -23,6 +23,7 @@
     .image {
       max-width: 200px;
       flex: 1 1 20%;
+      padding-right: 2%;
     }
 
     .contentWrapper {
@@ -41,12 +42,10 @@
 
       .status {
         margin: 10px 0;
-        text-transform: lowercase;
       }
     }
   }
 }
-
 
 @media (max-width: 576px) {
   .root {
