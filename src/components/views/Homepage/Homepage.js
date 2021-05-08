@@ -38,7 +38,7 @@ class Component extends React.Component {
 
         <Container maxWidth="lg">
           {user.logged ?
-            <Fab color="secondary" aria-label="add" href="/post/add" className={styles.button}>
+            <Fab color="secondary" aria-label="add" href="/posts/add" className={styles.button}>
               <AddIcon />
             </Fab>
             : ''
@@ -48,7 +48,7 @@ class Component extends React.Component {
             <Card key={el.id} className={styles.card}>
               <CardHeader title={el.title} subheader={`${el.date}/${el.updateDate}`} />
               <CardActions className={styles.link}>
-                <Button size="small" color="secondary" variant="contained" href={`/post/${el.id}`}>
+                <Button size="small" color="secondary" variant="contained" href={`/posts/${el.id}`}>
                   Show details
                 </Button>
               </CardActions>

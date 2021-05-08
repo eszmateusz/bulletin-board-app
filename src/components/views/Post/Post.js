@@ -59,7 +59,7 @@ const Component = ({ className, match, posts, user }) => (
 
           {user.logged && user.id === el.userId ?
             <CardActions className={styles.link}>
-              <Button size="small" color="secondary" variant="contained" href={`/post/${el.id}/edit`}>
+              <Button size="small" color="secondary" variant="contained" href={`/posts/${el.id}/edit`}>
                 Edit
               </Button>
             </CardActions>
